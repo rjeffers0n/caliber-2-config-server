@@ -1,0 +1,21 @@
+server:
+  port: 8013
+
+spring:
+  application:
+    name: category-service
+  datasource:
+    url: jdbc:h2:mem:testdb;Mode=PostgreSQL
+    platform: h2
+  jpa:
+    hibernate:
+      ddl-auto: create
+    
+eureka:
+  client:
+    fetch-registry: true
+    service-url:
+      default: ${EUREKA_HOME}
+  instance:
+    lease-expiration-duration-in-seconds: 2
+    lease-renewal-interval-in-seconds: 1
