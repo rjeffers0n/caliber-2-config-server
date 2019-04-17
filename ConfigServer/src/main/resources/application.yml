@@ -16,4 +16,8 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/August112641/config-server.git
+          uri: ${Config_Server}
+          username: ${RemoteRepo_User}
+          password: ${RemoteRepo_Pass}
+          
+          
