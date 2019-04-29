@@ -7,6 +7,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --no-include-email --region $AWS_REGION)
       - BUILD_ID=$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $3}')
+      - echo Using BUILD_ID = $BUILD_ID
   build:
     commands:
       - echo Building Maven Project
