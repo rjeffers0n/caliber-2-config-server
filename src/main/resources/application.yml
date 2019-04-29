@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     service-url:
-      default: ${EUREKA_HOME}
+      default: 54.147.136.238:32820/eureka 
   instance:
     lease-expiration-duration-in-seconds: 2
     lease-renewal-interval-in-seconds: 1
@@ -16,8 +16,6 @@ spring:
     config:
       server:
         git:
-          uri: ${Config_Server}
-          username: ${RemoteRepo_User}
-          password: ${RemoteRepo_Pass}
+          uri: https://github.com/revaturelabs/caliber-2-central-config-repo.git
           
           
