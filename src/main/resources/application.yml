@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     service-url:
-      default: 54.147.136.238:32820/eureka 
+      default: http://54.147.136.238:32820/eureka 
   instance:
     lease-expiration-duration-in-seconds: 2
     lease-renewal-interval-in-seconds: 1
