@@ -1,13 +1,13 @@
 server:
   port: 8888
-  
-eureka:
-  client:
-    service-url:
-      default: http://54.147.136.238:32820/eureka 
-  instance:
-    lease-expiration-duration-in-seconds: 2
-    lease-renewal-interval-in-seconds: 1
+#  
+#eureka:
+#  client:
+#    service-url:
+#      default: http://54.147.136.238:32820/eureka 
+#  instance:
+#    lease-expiration-duration-in-seconds: 2
+#    lease-renewal-interval-in-seconds: 1
 
 spring:
   application:
