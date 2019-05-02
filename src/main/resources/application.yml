@@ -4,7 +4,7 @@ server:
 eureka:
  client:
    service-url:
-     default: http://ec2-54-147-136-238.compute-1.amazonaws.com:34685/eureka
+     defaultZone: http://caliber-2-dev-alb-315997072.us-east-1.elb.amazonaws.com/eureka
  instance:
    lease-expiration-duration-in-seconds: 2
    lease-renewal-interval-in-seconds: 1
