@@ -1,22 +1,39 @@
 server:
   port: 8888
- 
-eureka:
- client:
-   service-url:
-     defaultZone: http://caliber-2-dev-alb-315997072.us-east-1.elb.amazonaws.com/eureka
- instance:
-   prefer-ip-address: true 
-   lease-expiration-duration-in-seconds: 2
-   lease-renewal-interval-in-seconds: 1
 
 spring:
   application:
     name: config
+          
+---
+# (dev) development profile
+spring:
+  profiles: dev
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${DEV_CENTRAL_CONFIG_REPO}
+
+eureka:
+ client:
+   service-url:
+     defaultZone: http://localhost:8761/eureka
+ 
+---
+# (prod) production profile
+spring:
+  profiles: prod
   cloud:
     config:
       server:
         git:
           uri: https://github.com/revaturelabs/caliber-2-central-config-repo.git
-          
+  
+eureka:
+ client:
+   service-url:
+     defaultZone: http://caliber-2-dev-alb-315997072.us-east-1.elb.amazonaws.com/eureka
+ instance:
+   prefer-ip-address: true           
           
