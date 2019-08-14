@@ -2,6 +2,13 @@ server:
   port: 8888
   servlet-path: /config
 
+logging:
+  level:
+    org:
+      springframework:
+        web:
+          servlet: DEBUG
+
 spring:
   application:
     name: config
