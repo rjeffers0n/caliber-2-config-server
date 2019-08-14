@@ -6,7 +6,7 @@ phases:
       - echo Building Config
       - echo Logging in to Amazon ECR...
       - $(aws ecr get-login --no-include-email --region $AWS_REGION)
-      - BUILD_ID=$(cut -c1-50 < $CODEBUILD_RESOLVED_SOURCE_VERSION )
+      - BUILD_ID=expr substr $CODEBUILD_RESOLVED_SOURCE_VERSION 1 9
       - echo Using BUILD_ID = $BUILD_ID
   build:
     commands:
