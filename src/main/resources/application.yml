@@ -4,6 +4,18 @@ server:
 spring:
   application:
     name: config
+---
+spring:
+  profiles: local
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/revaturelabs/caliber-2-central-config-repo.git
+eureka:
+ client:
+   service-url:
+     defaultZone: http://localhost:8761/eureka
           
 ---
 # (dev) development profile
@@ -13,12 +25,7 @@ spring:
     config:
       server:
         git:
-          uri: ${DEV_CENTRAL_CONFIG_REPO}
-
-eureka:
- client:
-   service-url:
-     defaultZone: http://localhost:8761/eureka
+          uri: https://github.com/revaturelabs/caliber-2-central-config-repo.git
  
 ---
 # (prod) production profile
@@ -37,5 +44,4 @@ eureka:
  instance:
    leaseRenewalIntervalInSeconds: 5
    lease-expiration-duration-in-seconds: 5
-   prefer-ip-address: true           
-          
+   prefer-ip-address: true   
