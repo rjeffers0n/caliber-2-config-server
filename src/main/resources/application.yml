@@ -29,7 +29,7 @@ spring:
           uri: https://github.com/revaturelabs/caliber-2-central-config-repo.git
 eureka:
   client:
-    register-with-eureka: false
+    enabled: false
 ---
 # (prod) production profile
 spring:
