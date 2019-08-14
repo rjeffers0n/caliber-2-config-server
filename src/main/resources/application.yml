@@ -1,5 +1,6 @@
 server:
   port: 8888
+  servlet-path: /config
 
 spring:
   application:
@@ -26,7 +27,9 @@ spring:
       server:
         git:
           uri: https://github.com/revaturelabs/caliber-2-central-config-repo.git
- 
+eureka:
+  client:
+    register-with-eureka: false
 ---
 # (prod) production profile
 spring:
