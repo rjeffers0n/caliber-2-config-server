@@ -16,7 +16,7 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...          
       - docker build -t $SERVICE_NAME:$BUILD_ID --build-arg JAR_FILE=config-server.jar --build-arg SPRING_ENV=$SPRING_ENV .
-      - docker tag $SERVICE_NAME:$BUILD_ID $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$SERVICE_NAME:$BUILD_ID
+      - docker tag $SERVICE_NAME:$BUILD_ID $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPO_NAME:$BUILD_ID
   post_build:
     commands:
       - echo Build completed on `date`
