@@ -67,7 +67,7 @@ server:
   servlet-path: /config
 
 spring:
-  profiles: dev
+  profiles: perf
   cloud:
     config:
       server:
