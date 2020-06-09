@@ -102,7 +102,7 @@ stage ('Deploy image to DockerHub'){
             emailext (
                 subject: "FAILED: '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
                 body: "JOB '${env.JOB_NAME} [${env.BUILD_NUMBER}]' has failed on '${env.BUILD_TIMESTAMP}'.\nGIT URL: '${env.GIT_URL}'\nGIT BRANCH: '${env.GIT_BRANCH}'\nGIT COMMIT SHA: '${env.GIT_COMMIT}'\nCheck the console output at '${env.BUILD_URL}'.",
-                to: "austin.t.kind@gmail.com",
+                to: "rjeffer85@gmail.com",
                 attachLog: true
                 )
         }
